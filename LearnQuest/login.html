@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | LearnQuest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+
+    <!-- Chalkboard: form side -->
+    <section class="panel">
+      <div class="chalk">
+        <header class="chalk-top">
+          <a class="logo" href="login.html">LearnQuest</a>
+          <nav class="chalk-nav">
+            <a href="login.html" aria-current="page">Log in</a>
+            <a href="register.html">Sign up</a>
+          </nav>
+        </header>
+
+        <div class="form-area">
+          <h1>Welcome back!</h1>
+          <p class="intro">Log in to continue your quizzes and see your points.</p>
+
+          <!-- Connect to your Spring Boot API later, e.g. POST /auth/login -->
+          <form action="#" method="post">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" minlength="6" required>
+            </div>
+
+            <div class="row">
+              <label><input type="checkbox" name="remember"> Remember me</label>
+              <a href="forgot-password.html">Forgot password?</a>
+            </div>
+
+            <p class="form-error" id="loginError" hidden></p>
+
+            <button type="submit" class="btn">Log in</button>
+          </form>
+
+          <p class="switch">New here? <a href="register.html">Join the class</a></p>
+        </div>
+
+        <div class="chalk-foot" aria-hidden="true"><i class="stick"></i><i class="stick"></i><i class="stick"></i></div>
+      </div>
+    </section>
+
+    <!-- Classroom scene -->
+    <section class="scene" aria-hidden="true">
+    <svg class="room" viewBox="0 0 600 470" preserveAspectRatio="xMidYMax meet" role="img" aria-label="A classroom with a teacher and three students working on computers">
+      <defs><clipPath id="win"><rect x="30" y="46" width="84" height="88" rx="3"/></clipPath></defs>
+      <rect x="-2000" y="-2000" width="4600" height="2430" fill="#d7e6f7"/>
+      <rect x="-2000" y="430" width="4600" height="12" fill="#ffffff"/>
+      <rect x="-2000" y="442" width="4600" height="2000" fill="#c79a6b"/>
+      <path d="M-2000 480H2600M-2000 512H2600" stroke="#000" stroke-opacity=".08" stroke-width="2"/>
+
+      <!-- window -->
+      <rect x="24" y="40" width="96" height="100" rx="6" fill="#fff"/>
+      <rect x="30" y="46" width="84" height="88" rx="3" fill="#bfe3f7"/>
+      <g clip-path="url(#win)"><g class="cloud"><ellipse cx="50" cy="76" rx="16" ry="8" fill="#fff"/><ellipse cx="64" cy="70" rx="12" ry="8" fill="#fff"/></g></g>
+      <path d="M72 46V134M30 90H114" stroke="#fff" stroke-width="4"/>
+
+      <!-- clock -->
+      <circle cx="505" cy="100" r="30" fill="#fff" stroke="#25453d" stroke-width="5"/>
+      <path d="M505 76v6M505 118v6M481 100h6M523 100h6" stroke="#25453d" stroke-width="3" stroke-linecap="round"/>
+      <path d="M505 100L515 108" stroke="#25453d" stroke-width="4" stroke-linecap="round"/>
+      <path class="hand" d="M505 100V78" stroke="#ea5a3c" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="505" cy="100" r="3.5" fill="#25453d"/>
+
+      <!-- whiteboard -->
+      <rect x="150" y="48" width="300" height="156" rx="8" fill="#8a8f94"/>
+      <rect x="158" y="56" width="284" height="140" rx="4" fill="#fbfdff"/>
+      <rect x="150" y="204" width="300" height="8" rx="3" fill="#6c7176"/>
+      <text class="bt" x="176" y="88">Quiz time!</text>
+      <text class="qt" x="176" y="122">7 &#215; 8 = ?</text>
+      <rect x="172" y="138" width="60" height="46" rx="8" fill="#f5a742"/><text class="ot" x="202" y="168">54</text><rect x="240" y="138" width="60" height="46" rx="8" fill="#4a74f0" class="pick"/><text class="ot" x="270" y="168">56</text><rect x="308" y="138" width="60" height="46" rx="8" fill="#5bc97e"/><text class="ot" x="338" y="168">64</text><rect x="376" y="138" width="60" height="46" rx="8" fill="#ea5a3c"/><text class="ot" x="406" y="168">48</text>
+      <g class="tick"><circle cx="296" cy="138" r="11" fill="#19b38a" stroke="#fff" stroke-width="2"/><path d="M290 138l4 5 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+      <!-- teacher -->
+      <rect x="60" y="396" width="14" height="46" fill="#2f3a40"/><rect x="86" y="396" width="14" height="46" fill="#2f3a40"/>
+      <rect x="55" y="438" width="24" height="12" rx="6" fill="#1d2529"/><rect x="81" y="438" width="24" height="12" rx="6" fill="#1d2529"/>
+      <path d="M50 336L110 336L118 400L42 400Z" fill="#2f3a40"/>
+      <rect x="48" y="230" width="64" height="116" rx="22" fill="#6c4ecb"/>
+      <path d="M68 232L80 260L92 232Z" fill="#fff"/>
+      <path d="M52 248Q40 292 58 312" stroke="#6c4ecb" stroke-width="14" stroke-linecap="round" fill="none"/>
+      <rect x="46" y="306" width="28" height="20" rx="3" fill="#ffd23f"/><path d="M60 306v20" stroke="#c99a12" stroke-width="2"/>
+      <circle cx="80" cy="172" r="12" fill="#3a2a2a"/>
+      <path d="M52 206C48 168 112 168 108 206 102 190 92 186 80 186 68 186 58 190 52 206Z" fill="#3a2a2a"/>
+      <circle cx="80" cy="207" r="25" fill="#f0b98d"/>
+      <path d="M55 203C58 184 102 184 105 203 96 194 64 194 55 203Z" fill="#3a2a2a"/>
+      <circle cx="70" cy="209" r="8.5" fill="none" stroke="#2f3a40" stroke-width="2.5"/><circle cx="90" cy="209" r="8.5" fill="none" stroke="#2f3a40" stroke-width="2.5"/><path d="M78.5 208h3" stroke="#2f3a40" stroke-width="2.5"/>
+      <g class="eyes"><circle cx="70" cy="209" r="2.6" fill="#2f3a40"/><circle cx="90" cy="209" r="2.6" fill="#2f3a40"/></g>
+      <path d="M72 220Q80 227 88 220" stroke="#2f3a40" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <g class="tap">
+        <path d="M108 245L148 232" stroke="#6c4ecb" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="152" cy="231" r="7" fill="#f0b98d"/>
+        <path d="M152 231L208 190" stroke="#d9a520" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <!-- students + computers -->
+      <g class="kid" style="animation-delay:0s"><rect x="195" y="290" width="60" height="46" rx="18" fill="#4a74f0"/><circle cx="197" cy="277" r="8" fill="#3a2a2a"/><circle cx="253" cy="277" r="8" fill="#3a2a2a"/><circle cx="225" cy="260" r="25" fill="#3a2a2a"/><circle cx="225" cy="264" r="22" fill="#f8c9a0"/><path d="M203 262 C203 236 247 236 247 262 C237 249 213 249 203 262Z" fill="#3a2a2a"/><g class="eyes"><circle cx="217" cy="266" r="3" fill="#2f3a40"/><circle cx="233" cy="266" r="3" fill="#2f3a40"/></g><path d="M219 275 Q225 281 231 275" stroke="#2f3a40" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>
+      <rect x="169" y="392" width="8" height="60" fill="#a87244"/><rect x="273" y="392" width="8" height="60" fill="#a87244"/>
+      <rect x="159" y="376" width="132" height="16" rx="5" fill="#c48a52"/>
+      <rect x="195" y="380" width="60" height="6" rx="2" fill="#e7ecef"/>
+      <rect x="217" y="362" width="16" height="14" fill="#5d6b74"/><rect x="201" y="372" width="48" height="6" rx="3" fill="#5d6b74"/>
+      <rect x="175" y="296" width="100" height="68" rx="6" fill="#3b4a54"/>
+      <rect x="181" y="302" width="88" height="56" rx="3" fill="#12303a"/>
+      <rect x="187" y="308" width="44" height="5" rx="2.5" fill="#7fdcea"/>
+      <rect x="187" y="318" width="36" height="10" rx="2" fill="#f5a742"/><rect x="227" y="318" width="36" height="10" rx="2" fill="#4a74f0" class="pick" style="animation-delay:0s"/>
+      <rect x="187" y="331" width="36" height="10" rx="2" fill="#5bc97e"/><rect x="227" y="331" width="36" height="10" rx="2" fill="#ea5a3c"/>
+      <rect x="187" y="347" width="76" height="5" rx="2.5" fill="#ffffff" opacity=".2"/>
+      <rect x="187" y="347" width="76" height="5" rx="2.5" fill="#ffd23f" class="prog" style="animation-delay:0s"/>
+      <text class="plus" x="225" y="228" style="animation-delay:0s">+10</text>
+      <g class="kid" style="animation-delay:0.5s"><rect x="345" y="290" width="60" height="46" rx="18" fill="#5bc97e"/><circle cx="375" cy="264" r="22" fill="#c98f66"/><path d="M352 259 a23 21 0 0 1 46 0z" fill="#ef476f"/><rect x="373" y="255" width="30" height="5" rx="2.5" fill="#ef476f"/><g class="eyes"><circle cx="367" cy="266" r="3" fill="#2f3a40"/><circle cx="383" cy="266" r="3" fill="#2f3a40"/></g><path d="M369 275 Q375 281 381 275" stroke="#2f3a40" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>
+      <rect x="319" y="392" width="8" height="60" fill="#a87244"/><rect x="423" y="392" width="8" height="60" fill="#a87244"/>
+      <rect x="309" y="376" width="132" height="16" rx="5" fill="#c48a52"/>
+      <rect x="345" y="380" width="60" height="6" rx="2" fill="#e7ecef"/>
+      <rect x="367" y="362" width="16" height="14" fill="#5d6b74"/><rect x="351" y="372" width="48" height="6" rx="3" fill="#5d6b74"/>
+      <rect x="325" y="296" width="100" height="68" rx="6" fill="#3b4a54"/>
+      <rect x="331" y="302" width="88" height="56" rx="3" fill="#12303a"/>
+      <rect x="337" y="308" width="44" height="5" rx="2.5" fill="#7fdcea"/>
+      <rect x="337" y="318" width="36" height="10" rx="2" fill="#f5a742"/><rect x="377" y="318" width="36" height="10" rx="2" fill="#4a74f0" class="pick" style="animation-delay:1.7s"/>
+      <rect x="337" y="331" width="36" height="10" rx="2" fill="#5bc97e"/><rect x="377" y="331" width="36" height="10" rx="2" fill="#ea5a3c"/>
+      <rect x="337" y="347" width="76" height="5" rx="2.5" fill="#ffffff" opacity=".2"/>
+      <rect x="337" y="347" width="76" height="5" rx="2.5" fill="#ffd23f" class="prog" style="animation-delay:1.7s"/>
+      <text class="plus" x="375" y="228" style="animation-delay:1.7s">+10</text>
+      <g class="kid" style="animation-delay:1.0s"><rect x="495" y="290" width="60" height="46" rx="18" fill="#f5a742"/><path d="M499 268 A26 28 0 0 1 551 268" stroke="#2f3a40" stroke-width="5" fill="none"/><circle cx="525" cy="264" r="22" fill="#8d5a3b"/><path d="M503 262 C503 236 547 236 547 262 C537 249 513 249 503 262Z" fill="#1d1d1d"/><rect x="494" y="260" width="9" height="18" rx="4.5" fill="#2f3a40"/><rect x="547" y="260" width="9" height="18" rx="4.5" fill="#2f3a40"/><g class="eyes"><circle cx="517" cy="266" r="3" fill="#2f3a40"/><circle cx="533" cy="266" r="3" fill="#2f3a40"/></g><path d="M519 275 Q525 281 531 275" stroke="#2f3a40" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>
+      <rect x="469" y="392" width="8" height="60" fill="#a87244"/><rect x="573" y="392" width="8" height="60" fill="#a87244"/>
+      <rect x="459" y="376" width="132" height="16" rx="5" fill="#c48a52"/>
+      <rect x="495" y="380" width="60" height="6" rx="2" fill="#e7ecef"/>
+      <rect x="517" y="362" width="16" height="14" fill="#5d6b74"/><rect x="501" y="372" width="48" height="6" rx="3" fill="#5d6b74"/>
+      <rect x="475" y="296" width="100" height="68" rx="6" fill="#3b4a54"/>
+      <rect x="481" y="302" width="88" height="56" rx="3" fill="#12303a"/>
+      <rect x="487" y="308" width="44" height="5" rx="2.5" fill="#7fdcea"/>
+      <rect x="487" y="318" width="36" height="10" rx="2" fill="#f5a742"/><rect x="527" y="318" width="36" height="10" rx="2" fill="#4a74f0" class="pick" style="animation-delay:3.4s"/>
+      <rect x="487" y="331" width="36" height="10" rx="2" fill="#5bc97e"/><rect x="527" y="331" width="36" height="10" rx="2" fill="#ea5a3c"/>
+      <rect x="487" y="347" width="76" height="5" rx="2.5" fill="#ffffff" opacity=".2"/>
+      <rect x="487" y="347" width="76" height="5" rx="2.5" fill="#ffd23f" class="prog" style="animation-delay:3.4s"/>
+      <text class="plus" x="525" y="228" style="animation-delay:3.4s">+10</text>
+    </svg>
+    </section>
+
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

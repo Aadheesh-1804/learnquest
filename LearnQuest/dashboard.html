@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | LearnQuest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dash-frame">
+    <main class="dash-board">
+
+      <div class="doodles" aria-hidden="true">
+        <span class="doodle d1">&#9733;</span>
+        <span class="doodle d2">&#9834;</span>
+        <span class="doodle d3">&#10022;</span>
+        <span class="doodle d4">&#10084;</span>
+        <span class="doodle d5">&#9728;</span>
+        <span class="doodle d6">&#9729;</span>
+      </div>
+
+      <header class="dash-top">
+        <div class="dash-brand">
+          <a class="logo" href="dashboard.html">LearnQuest</a>
+          <p class="greeting" id="greeting">Welcome back!</p>
+        </div>
+        <div class="dash-user">
+          <span class="points-badge"><span class="star">&#9733;</span> <span id="pointsValue">0</span> pts</span>
+
+          <div class="profile-menu">
+            <button class="avatar" id="avatarBtn" type="button" aria-haspopup="true" aria-expanded="false" title="Your profile">&#129464;</button>
+            <div class="profile-dropdown" id="profileDropdown" hidden>
+              <button type="button" id="settingsBtn">&#9881;&#65039; Settings</button>
+              <button type="button" id="logoutBtn">&#9211; Logout</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="dash-heading">
+        <h1>Choose a topic</h1>
+        <p class="intro">Pick a topic to see quizzes at your level.</p>
+      </div>
+
+      <div class="dash-content">
+      <div class="topics">
+
+        <button class="topic-card" type="button" data-topic="Flags">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8 V56"/>
+            <path d="M16 10 Q28 4 38 10 Q48 16 16 20 Z"/>
+          </svg>
+          <span class="topic-name">Flags</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="States and Capitals">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 16 L24 10 L40 16 L54 10 V46 L40 52 L24 46 L10 52 Z"/>
+            <path d="M24 10 V46 M40 16 V52"/>
+            <circle cx="32" cy="30" r="3.4" fill="currentColor" stroke="none"/>
+          </svg>
+          <span class="topic-name">States &amp; Capitals</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="Animals">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="32" cy="38" r="12"/>
+            <circle cx="16" cy="20" r="5.5"/>
+            <circle cx="30" cy="12" r="5.5"/>
+            <circle cx="46" cy="18" r="5.5"/>
+          </svg>
+          <span class="topic-name">Animals</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="Mathematics">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 14 L24 26 M24 14 L12 26"/>
+            <path d="M40 12 V26 M33 19 H47"/>
+            <path d="M12 42 H28 M12 50 H38"/>
+          </svg>
+          <span class="topic-name">Mathematics</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="Science">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M26 9 H38 M29 9 V24 L17 47 Q15 51 20 51 H44 Q49 51 47 47 L35 24 V9"/>
+            <circle cx="29" cy="41" r="1.8" fill="currentColor" stroke="none"/>
+            <circle cx="36" cy="45" r="1.4" fill="currentColor" stroke="none"/>
+            <circle cx="33" cy="38" r="1.2" fill="currentColor" stroke="none"/>
+          </svg>
+          <span class="topic-name">Science</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="English">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 16 Q23 9 32 16 Q41 9 54 16 V46 Q41 39 32 46 Q23 39 10 46 Z"/>
+            <path d="M32 16 V46"/>
+          </svg>
+          <span class="topic-name">English</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="Space and Planets">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="28" cy="36" r="13"/>
+            <ellipse cx="28" cy="36" rx="22" ry="6" transform="rotate(-18 28 36)"/>
+            <path d="M48 12 L50 17 L55 19 L50 21 L48 26 L46 21 L41 19 L46 17 Z" fill="currentColor" stroke="none"/>
+          </svg>
+          <span class="topic-name">Space &amp; Planets</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="Fruits and Vegetables">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M32 24 C20 16 10 26 14 38 C17 48 25 54 32 54 C39 54 47 48 50 38 C54 26 44 16 32 24 Z"/>
+            <path d="M32 24 V16"/>
+            <path d="M32 16 Q39 10 46 14"/>
+          </svg>
+          <span class="topic-name">Fruits &amp; Vegetables</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="Birds">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 36 Q18 18 32 32 Q46 18 58 36"/>
+            <path d="M6 44 Q18 29 32 41 Q46 29 58 44"/>
+          </svg>
+          <span class="topic-name">Birds</span>
+        </button>
+
+        <button class="topic-card" type="button" data-topic="Riddles">
+          <svg class="topic-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="32" cy="32" r="20"/>
+            <path d="M25 24 Q25 15 33 15 Q41 15 41 24 Q41 31 33 33 V38"/>
+            <circle cx="33" cy="45" r="1.8" fill="currentColor" stroke="none"/>
+          </svg>
+          <span class="topic-name">Riddles</span>
+        </button>
+
+      </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Difficulty modal -->
+  <div class="modal-overlay" id="difficultyOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="difficultyTitle">
+      <h2 id="difficultyTitle">Choose a difficulty</h2>
+      <p class="modal-sub" id="difficultyTopic">Topic</p>
+
+      <div class="difficulty-grid">
+
+        <button type="button" class="difficulty-btn" data-difficulty="Easy">
+          <span class="diff-stars" aria-hidden="true">
+            <svg class="diff-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.1 21 L12 17.3 L5.9 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          </span>
+          <span class="diff-label">Easy</span>
+          <span class="diff-sub">Just starting out</span>
+        </button>
+
+        <button type="button" class="difficulty-btn" data-difficulty="Intermediate">
+          <span class="diff-stars" aria-hidden="true">
+            <svg class="diff-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.1 21 L12 17.3 L5.9 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+            <svg class="diff-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.1 21 L12 17.3 L5.9 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          </span>
+          <span class="diff-label">Intermediate</span>
+          <span class="diff-sub">Getting the hang of it</span>
+        </button>
+
+        <button type="button" class="difficulty-btn" data-difficulty="Advanced">
+          <span class="diff-stars" aria-hidden="true">
+            <svg class="diff-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.1 21 L12 17.3 L5.9 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+            <svg class="diff-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.1 21 L12 17.3 L5.9 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+            <svg class="diff-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2 L14.9 8.6 L22 9.3 L16.5 14 L18.1 21 L12 17.3 L5.9 21 L7.5 14 L2 9.3 L9.1 8.6 Z"/></svg>
+          </span>
+          <span class="diff-label">Advanced</span>
+          <span class="diff-sub">Top of the class</span>
+        </button>
+
+      </div>
+
+      <button type="button" class="btn-secondary" id="difficultyCancel">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Session expired modal -->
+  <div class="modal-overlay" id="sessionExpiredOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="sessionExpiredTitle">
+      <h2 id="sessionExpiredTitle">Session expired</h2>
+      <p class="modal-sub">Your session has expired. Please log in again to continue.</p>
+      <button type="button" class="btn" id="sessionExpiredBtn">OK</button>
+    </div>
+  </div>
+
+  <!-- Settings modal -->
+  <div class="modal-overlay" id="settingsOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <h2 id="settingsTitle">Settings</h2>
+
+      <div class="field">
+        <label for="settingName">Name</label>
+        <input type="text" id="settingName" placeholder="Your name">
+      </div>
+
+      <div class="field">
+        <label for="settingPassword">New password</label>
+        <input type="password" id="settingPassword" placeholder="Leave blank to keep current" autocomplete="new-password">
+      </div>
+
+      <div class="field">
+        <label for="settingConfirm">Confirm new password</label>
+        <input type="password" id="settingConfirm" placeholder="Leave blank to keep current" autocomplete="new-password">
+      </div>
+
+      <div class="field">
+        <label>Choose an avatar</label>
+        <div class="avatar-grid" id="avatarGrid"></div>
+      </div>
+
+      <p class="form-error" id="settingsError" hidden></p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="settingsCancel">Cancel</button>
+        <button type="button" class="btn" id="settingsSave">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
