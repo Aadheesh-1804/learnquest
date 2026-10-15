@@ -1,6 +1,6 @@
 // Talks to the real Spring Boot backend: POST /api/auth/register.
 // The chalkboard only expands to fill the screen after the server confirms success.
-var API_BASE = 'http://localhost:8080';
+var API_BASE = 'https://learnquest-nofa.onrender.com';
 
 // ---------- Avatar picker (same 10 kid-friendly cartoon characters as the dashboard) ----------
 var AVATAR_SEEDS = ['Felix', 'Aneka', 'Milo', 'Zara', 'Leo', 'Nova', 'Kai', 'Luna', 'Max', 'Ivy'];
