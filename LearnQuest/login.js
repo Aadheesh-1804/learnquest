@@ -1,6 +1,6 @@
 // Talks to the real Spring Boot backend: POST /api/auth/login.
 // The chalkboard only expands to fill the screen after the server confirms success.
-var API_BASE = 'http://localhost:8080';
+
 
 // If we were redirected here after a session timeout or a password reset, show a notice.
 (function () {
