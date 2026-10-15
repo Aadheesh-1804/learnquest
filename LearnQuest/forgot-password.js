@@ -1,4 +1,4 @@
-var API_BASE = 'http://localhost:8080';
+var API_BASE = 'https://learnquest-nofa.onrender.com';
 
 document.querySelector('form').addEventListener('submit', function (e) {
   e.preventDefault();
