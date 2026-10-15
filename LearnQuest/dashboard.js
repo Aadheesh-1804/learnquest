@@ -21,7 +21,7 @@ function avatarMarkup(value) {
   return value || AVATARS[0];
 }
 
-var API_BASE = 'http://localhost:8080';
+   var API_BASE = 'https://learnquest-nofa.onrender.com';
 
 // ---------- Session expires 5 minutes after this page was opened ----------
 var SESSION_DURATION_MS = 5 * 60 * 1000; // 5 minutes
