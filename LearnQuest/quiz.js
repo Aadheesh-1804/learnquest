@@ -1,5 +1,5 @@
 // ---------- Config ----------
-var API_BASE = 'http://localhost:8080';
+var API_BASE = 'https://learnquest-nofa.onrender.com';
 var POINTS_PER_CORRECT = { EASY: 5, INTERMEDIATE: 10, ADVANCED: 20 };
 
 // ---------- Read topic & difficulty from the URL ----------
