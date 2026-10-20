@@ -61,6 +61,13 @@ public class AuthController {
         return UserResponse.fromEntity(saved);
     }
 
+    @GetMapping("/profile")
+    public UserResponse profile(@RequestParam("email") String email) {
+        User user = userRepository.findByEmail(email.trim().toLowerCase())
+                .orElseThrow(() -> new NoSuchElementException("User not found."));
+        return UserResponse.fromEntity(user);
+    }
+
     @PostMapping("/add-points")
     public UserResponse addPoints(@RequestBody AddPointsRequest request) {
         String email = request.getEmail().trim().toLowerCase();
