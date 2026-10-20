@@ -21,7 +21,7 @@ function avatarMarkup(value) {
   return value || AVATARS[0];
 }
 
-   var API_BASE = 'https://learnquest-nofa.onrender.com';
+var API_BASE = 'https://learnquest-nofa.onrender.com';
 
 // ---------- Session expires 5 minutes after this page was opened ----------
 var SESSION_DURATION_MS = 5 * 60 * 1000; // 5 minutes
@@ -64,6 +64,25 @@ function paintProfile() {
   avatarBtn.innerHTML = avatarMarkup(record.avatar);
 }
 paintProfile();
+
+// Always ask the server for the latest profile, so points are never out of date.
+if (email) {
+  fetch(API_BASE + '/api/auth/profile?email=' + encodeURIComponent(email))
+    .then(function (res) {
+      if (!res.ok) throw new Error('Could not load profile');
+      return res.json();
+    })
+    .then(function (fresh) {
+      fresh.isNew = current && current.isNew;
+      record = fresh;
+      current = fresh;
+      setCurrent(fresh);
+      paintProfile();
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
+}
 
 // ---------- Profile dropdown ----------
 var profileDropdown = document.getElementById('profileDropdown');
