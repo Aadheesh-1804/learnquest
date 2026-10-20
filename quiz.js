@@ -210,7 +210,16 @@ function finishQuiz() {
     resultSub.textContent = 'Every attempt helps you learn ' + topic + ' better.';
   }
 
+  // Lock the buttons until the points are saved, so leaving the page can't cancel the save.
+  var backBtn = document.getElementById('backToDashBtn');
+  var retakeBtn = document.getElementById('retakeBtn');
+  var backBtnText = backBtn.textContent;
+
   if (email && earnedPoints > 0) {
+    backBtn.disabled = true;
+    retakeBtn.disabled = true;
+    backBtn.textContent = 'Saving your points...';
+
     fetch(API_BASE + '/api/auth/add-points', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -227,6 +236,12 @@ function finishQuiz() {
       })
       .catch(function (err) {
         console.error(err);
+        resultSub.textContent = 'We could not save your points this time. Please check your connection and try again.';
+      })
+      .finally(function () {
+        backBtn.disabled = false;
+        retakeBtn.disabled = false;
+        backBtn.textContent = backBtnText;
       });
   }
 
